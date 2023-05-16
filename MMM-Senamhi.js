@@ -36,13 +36,13 @@ Module.register("MMM-Senamhi", {
         if(this.content.length > 0 ) {
             // loop the list of nodes (if any)
             for (const [key, value] of Object.entries(this.content)) {
-                // create a hold for the text of this node
-                let w = document.createElement("div");
-                // get the node fron the returned object
-                let n = value['date'];
-                w.innerHTML = n;
+                
+                var day = document.createElement("span");
+                day.setAttribute('class', 'day-name');
+                day.innerHTML  = value['date'];
+                
                 // append this info to the base wrapper
-                wrapper.appendChild(w);
+                wrapper.appendChild(day);
             }
         }
         else {
