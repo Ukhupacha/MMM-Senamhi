@@ -48,9 +48,8 @@ module.exports = NodeHelper.create ({
 
     // getForecast function
     getForecast: async function(locationId) {
-
-        const locationUrl = this.getLocationUrl(locationId);
-        const { data: html } = await axios.get(locationUrl, {
+        const locationUrl = (location) => `https://www.senamhi.gob.pe/?p=pronostico-detalle&localidad=${location}`;
+        const { data: html } = await axios.get(locationUrl(locationId), {
             headers: {
                 accept: '*/*',
                 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36',
