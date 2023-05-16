@@ -86,11 +86,4 @@ module.exports = NodeHelper.create ({
 
         return forecast;
     },
-
-    // function to get url base on location id
-    getLocationUrl: function(locationId) {
-        const locationUrl = (locationId) => `https://www.senamhi.gob.pe/?p=pronostico-detalle&localidad=${locationId}`;
-        return locationUrl;
-    }
-
 })
