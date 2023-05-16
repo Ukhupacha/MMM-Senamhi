@@ -34,7 +34,7 @@ module.exports = NodeHelper.create ({
     // get the selected dom nodes from the specific web site page
     getcontent(){
         //setting JSDOM parameters
-        this.getForecast(this.config.location_id)
+        this.getForecast(this.config.locationId)
             .then(
                 // this is the no error return from 
                 (forecast) => {                    
@@ -47,9 +47,9 @@ module.exports = NodeHelper.create ({
     },
 
     // getForecast function
-    getForecast: async function(location_id) {
+    getForecast: async function(locationId) {
 
-        const locationUrl = this.getLocationUrl(location_id);
+        const locationUrl = this.getLocationUrl(locationId);
         const { data: html } = await axios.get(locationUrl, {
             headers: {
                 accept: '*/*',
@@ -89,8 +89,8 @@ module.exports = NodeHelper.create ({
     },
 
     // function to get url base on location id
-    getLocationUrl: function(location_id) {
-        const locationUrl = (location_id) => `https://www.senamhi.gob.pe/?p=pronostico-detalle&localidad=${location_id}`;
+    getLocationUrl: function(locationId) {
+        const locationUrl = (locationId) => `https://www.senamhi.gob.pe/?p=pronostico-detalle&localidad=${locationId}`;
         return locationUrl;
     }
 

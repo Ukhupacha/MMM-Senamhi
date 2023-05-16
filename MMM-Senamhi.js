@@ -1,6 +1,6 @@
 Module.register("MMM-Senamhi", {
     defaults: {
-        location_id: "0019"
+        locationId: "0019"
     },
     // place to save the list of nodes sent back from helper
     nodeList: {},
