@@ -2,8 +2,7 @@ Module.register("MMM-Senamhi", {
     defaults: {
         locationId: "0019"
     },
-    // place to save the list of nodes sent back from helper
-    nodeList: {},
+
     message: "MMM-Senamhi starting up",
     notificationReceived(notification, payload){
         Log.log("notification received=" + notification);
@@ -28,7 +27,7 @@ Module.register("MMM-Senamhi", {
             }
             // tell MM we have new stuff to display
             // will cause getDom() to be called
-            this.updateDom(1)
+            this.updateDom()
         }
     },
     getDom: function() {
