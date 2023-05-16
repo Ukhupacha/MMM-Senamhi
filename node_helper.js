@@ -37,7 +37,10 @@ module.exports = NodeHelper.create ({
         this.getForecast(this.config.locationId)
             .then(
                 // this is the no error return from 
-                (forecast) => {                    
+                (forecast) => {
+                    if (this.debug) {
+                        console.log(forecast);
+                    }                    
                     this.sendSocketNotification("node_data", forecast)
                 },
                 (error) => {
