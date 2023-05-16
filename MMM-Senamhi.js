@@ -18,7 +18,7 @@ Module.register("MMM-Senamhi", {
     },
     // helper sends back specific web page nodes scraped
     socketNotificationReceived: function(notification, payload){
-        if (notification == 'node_date') {
+        if (notification == 'node_data') {
             Log.log("received content back from helper")
             // save it
             this.content = payload;
