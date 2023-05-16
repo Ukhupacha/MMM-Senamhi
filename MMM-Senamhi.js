@@ -37,12 +37,16 @@ Module.register("MMM-Senamhi", {
             // loop the list of nodes (if any)
             for (const [key, value] of Object.entries(this.content)) {
                 
-                var day = document.createElement("span");
+                dayForecast = document.createElement("div");
+                dayForecast.setAttribute('class', "forecast-item-daily");
+
+                day = document.createElement("span");
                 day.setAttribute('class', 'day-name');
                 day.innerHTML  = value['date'];
+                dayForecast.appendChild(day);
                 
                 // append this info to the base wrapper
-                wrapper.appendChild(day);
+                wrapper.appendChild(dayForecast);
             }
         }
         else {
