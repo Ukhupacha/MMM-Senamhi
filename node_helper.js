@@ -19,7 +19,9 @@ module.exports = NodeHelper.create ({
     // Handle messages from our module// each notificiation indicates a different messgage
     // payload is a data structure that is different per message.. up to you to design this
     socketNotificationReceived(notification, payload) {
-        console.log(this.name + " received a socket notification: " + notification + " - Payload " + payload);
+        if (this.debug){
+            console.log(this.name + " received a socket notification: " + notification + " - Payload " + payload);
+        }        
         // if config message from module
         if (notification == "CONFIG") {
             // save payload config info
