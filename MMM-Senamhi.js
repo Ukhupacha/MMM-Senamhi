@@ -46,21 +46,26 @@ Module.register("MMM-Senamhi", {
                 day.innerHTML  = value['date'];
                 dayForecast.appendChild(day);
 
+		temp = document.createElement("span");
+		temp.setAttribute('class', 'temp-container');
+
                 // create day max temp
                 max = document.createElement("span");
                 max.setAttribute('class', 'max');
                 max.innerHTML = value['maxTemp'];
-                dayForecast.appendChild(max);
+                temp.appendChild(max);
 
-                separator = document.createElement("span");
-                separator.setAttribute('class', 'separator');
-                separator.innerHTML = '/';
-                dayForecast.appendChild(separator);
+		separator = document.createElement("span");
+		separator.setAttribute('class', 'max');
+		separator.innerHTML = '/';
+		temp.appendChild(separator);
 
-                min = document.createElement("span");
-                min.setAttribute('class', 'min');
-                min.innerHTML = value['minTemp'];
-                dayForecast.appendChild(min);
+		min = document.createElement("span");
+		min.setAttribute('class', 'min');
+		min.innerHTML = value['minTemp'];
+		temp.appendChild(min);
+
+                dayForecast.appendChild(temp);
                 
                 // append this info to the base wrapper
                 wrapper.appendChild(dayForecast);
