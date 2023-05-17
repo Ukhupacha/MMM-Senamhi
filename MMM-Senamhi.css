@@ -1,0 +1,7 @@
+.MMM-Senamhi *{
+    box-sizing: border-box;
+}
+
+.MMM-Senamhi .module-content .forecast-item-daily .day-name {
+    width: 105px;
+}
