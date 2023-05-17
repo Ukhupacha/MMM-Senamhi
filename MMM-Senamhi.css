@@ -20,3 +20,10 @@
     margin: auto;
     white-space: nowrap;
 }
+
+.MMM-Senamhi .module-content .forecast-item-daily .desc {
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    white-space: nowrap;
+}
