@@ -73,7 +73,7 @@ module.exports = NodeHelper.create ({
     
         const getDay = (day) => {
             const date = day.querySelector('strong').textContent.trim().split(" ")[0];
-            const icon = day.querySelector('img').getAttribute('src');
+            const icon = 'https://www.senamhi.gob.pe/' + day.querySelector('img').getAttribute('src');
             const maxTemp = day.querySelector('.text-max').textContent.split("C")[0];
             const minTemp = day.querySelector('.text-min').textContent.split("C")[0];
             const desc = day.querySelector('.desc').textContent;
