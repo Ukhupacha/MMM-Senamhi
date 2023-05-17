@@ -58,7 +58,7 @@ Module.register("MMM-Senamhi", {
                 temp.appendChild(max);
                 
                 separator = document.createElement("span");
-                separator.setAttribute('class', 'max');
+                separator.setAttribute('class', 'sep');
                 separator.innerHTML = '/';
                 temp.appendChild(separator);
                 
