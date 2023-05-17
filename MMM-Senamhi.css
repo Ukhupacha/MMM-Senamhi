@@ -13,6 +13,7 @@
     width: 30px;
     height: 30px;
     vertical-align: middle;
+    display: inline-block;
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .temp-container .max {

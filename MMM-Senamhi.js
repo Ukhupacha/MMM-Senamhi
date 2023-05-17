@@ -50,6 +50,7 @@ Module.register("MMM-Senamhi", {
 
                 // create image element
                 icon = document.createElement("img");
+		icon.setAttribute('class', 'icon');
                 icon.src =  value['icon'];
                 dayForecast.appendChild(icon);
                 
