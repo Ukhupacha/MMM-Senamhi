@@ -48,12 +48,17 @@ Module.register("MMM-Senamhi", {
                 day.innerHTML  = value['date'];
                 dayForecast.appendChild(day);
 
-                // create image element
+                // create image element and container
+                iconContainer = document.createAttribute("span");
+                iconContainer.setAttribute('class', 'icon-container');
+
                 icon = document.createElement("img");
-		icon.setAttribute('class', 'icon');
+		        icon.setAttribute('class', 'icon');
                 icon.src =  value['icon'];
-                dayForecast.appendChild(icon);
-                
+                iconContainer.appendChild(icon);
+
+                dayForecast.appendChild(iconContainer);
+
                 temp = document.createElement("span");
                 temp.setAttribute('class', 'temp-container');
 
