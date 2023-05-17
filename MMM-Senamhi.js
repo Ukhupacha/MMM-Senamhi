@@ -47,6 +47,11 @@ Module.register("MMM-Senamhi", {
                 day.setAttribute('class', 'day-name');
                 day.innerHTML  = value['date'];
                 dayForecast.appendChild(day);
+
+                // create image element
+                icon = document.createElement("img");
+                icon.setAttribute('src', vaule['icon']);
+                dayForecast.appendChild(icon);
                 
                 temp = document.createElement("span");
                 temp.setAttribute('class', 'temp-container');
