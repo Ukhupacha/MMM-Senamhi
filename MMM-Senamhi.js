@@ -15,6 +15,7 @@ Module.register("MMM-Senamhi", {
             this.sendSocketNotification("getcontent", null)
         }
     },
+
     // helper sends back specific web page nodes scraped
     socketNotificationReceived: function(notification, payload){
         if (notification == 'node_data') {
@@ -30,6 +31,7 @@ Module.register("MMM-Senamhi", {
             this.updateDom()
         }
     },
+
     getDom: function() {
         // base wrapper for our content
         wrapper = document.createElement("div");
@@ -76,7 +78,10 @@ Module.register("MMM-Senamhi", {
         }
         // tell MM this our content to add to the MM dom
         return wrapper;
+    },
 
-
+    getStyles: function () {
+        return ["MMM-Senamhi.css"];
     }
+
 });
