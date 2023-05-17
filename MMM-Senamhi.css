@@ -21,9 +21,15 @@
     white-space: nowrap;
 }
 
-.MMM-Senamhi .module-content .forecast-item-daily .desc {
-    display: block;
-    font-size: 16px;
+.MMM-Senamhi .module-content .forecast-item-daily .sep {
     margin: auto;
     white-space: nowrap;
+}
+
+.MMM-Senamhi .module-content .forecast-item-daily .desc {
+    display: block;
+    font-size: 13px;
+    margin: auto;
+    white-space: pre-line;
+    width: 300px;
 }
