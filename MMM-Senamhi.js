@@ -59,7 +59,7 @@ Module.register("MMM-Senamhi", {
 
                 min = document.createElement("span");
                 min.setAttribute('class', 'min');
-                min.innerHTML = valuet['mintTemp'];
+                min.innerHTML = value['minTemp'];
                 dayForecast.appendChild(min);
                 
                 // append this info to the base wrapper
