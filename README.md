@@ -11,7 +11,7 @@ Displays the weather according to [Senamhi](https://www.senamhi.gob.pe/?&p=estac
 To install the module, use your terminal to:
 1. Navigate to your MagicMirror's modules folder. If you are using the default installation directory, use the command:<br />`cd ~/MagicMirror/modules`
 2. Clone the module:<br />`https://github.com/Ukhupacha/MMM-Senamhi.git`
-3. Install: <br/>`npm installp`
+3. Install: <br/>`npm install`
 
 
 ## Using the module
