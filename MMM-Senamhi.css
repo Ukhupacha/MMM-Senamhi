@@ -8,21 +8,21 @@
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .day-name {
-    width: 100px;
+    width: 80px;
     margin: auto;
     font-size: 17px;
     display: inline-block;
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .icon {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
     display: inline-block;
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .icon-container {
-    width: 100px;
+    width: 60px;
     display: inline-block;
     margin: auto;
 
@@ -40,15 +40,22 @@
     white-space: nowrap;
 }
 
+.MMM-Senamhi .module-content .forecast-item-daily .temp-container {
+    width: 60px;
+    display: inline-block;
+    margin: auto;
+}
+
 .MMM-Senamhi .module-content .forecast-item-daily .sep {
     margin: auto;
     white-space: nowrap;
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .desc {
-    display: block;
+    display: inline-block;
     font-size: 13px;
     margin: auto;
     white-space: pre-line;
-    width: 300px;
+    width: 250px;
+    vertical-align: middle;
 }
