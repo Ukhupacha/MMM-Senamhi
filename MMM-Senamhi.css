@@ -5,6 +5,8 @@
 .MMM-Senamhi .module-content .forecast-item-daily {
     border-top: none;
     border-bottom: solid 1px #222;
+    height: 45px;
+    vertical-align: middle;
 }
 
 .MMM-Senamhi .module-content .forecast-item-daily .day-name {
