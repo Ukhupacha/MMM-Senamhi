@@ -1,18 +1,24 @@
 Module.register("MMM-Senamhi", {
     defaults: {
-        locationId: "0019"
+        locationId: "0019",
+        updateInterval: 3600000 // update each hour 60 x 60 x 1000
     },
 
     message: "MMM-Senamhi starting up",
     notificationReceived(notification, payload){
+        var self = this;
         Log.log("notification received=" + notification);
         // if all modules are running
         if(notification == 'ALL_MODULES_STARTED') {
             //send our confic down to helper use
-            this.sendSocketNotification("CONFIG", this.config)
+            self.sendSocketNotification("CONFIG", self.config)
             // get the playing content
-            this.message = "MMM-Senamhi waiting for content from api request"
-            this.sendSocketNotification("getcontent", null)
+            self.message = "MMM-Senamhi waiting for content from api request"
+            self.sendSocketNotification("getcontent", null)
+
+            setInterval(function () {
+                self.sendSocketNotification("getcontent", null);                
+            }, self.config.updateInterval);
         }
     },
 
